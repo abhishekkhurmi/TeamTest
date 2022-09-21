@@ -5,7 +5,6 @@ import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 
@@ -15,7 +14,6 @@ public class util {
         FileReader reader =  new FileReader(filepath);
         Object obj = jsonParser.parse(reader);
         JSONObject teamJson = (JSONObject) obj;
-        String name = (String)teamJson.get("name");
         JSONArray players = (JSONArray) teamJson.get("player");
         String[] player_country = new String[11];
         int count = 0;
@@ -39,7 +37,6 @@ public class util {
         FileReader reader =  new FileReader(filepath);
         Object obj = jsonParser.parse(reader);
         JSONObject teamJson = (JSONObject) obj;
-        String name = (String)teamJson.get("name");
         JSONArray players = (JSONArray) teamJson.get("player");
         String[] player_role = new String[11];
         int count = 0;
