@@ -24,8 +24,11 @@ public class AppTest {
     @Test
     void verifyWicketKeeper() throws IOException, ParseException {
         String JSONFilePath = "./src/data/TeamRCB.json";
-        int WicketKeeper = getWicketKeeperCount(JSONFilePath);
-        Assert.assertEquals(WicketKeeper,1);
+        boolean flag = false;
+        int wicketKeeper = getWicketKeeperCount(JSONFilePath);
+        if(wicketKeeper>=1)
+            flag = true;
+        Assert.assertTrue(flag);
     }
 
 
